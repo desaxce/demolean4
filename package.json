@@ -1,0 +1,38 @@
+{
+  "name": "demolean4",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Demo of lean4 monaco editor",
+  "scripts": {
+    "postinstall": "cd server && npm install",
+    "build_server": "cd server/LeanProject && lake build",
+    "start_server": "cd server && npm start",
+    "start_client": "vite --host",
+    "start": "concurrently \"npm run start_client\" \"npm run start_server\" -n client,server -c \"bgBlue.bold,bgMagenta.bold\""
+  },
+  "keywords": [
+    "lean4",
+    "monaco"
+  ],
+  "dependencies": {
+    "lean4monaco": "^1.0.28",
+    "memfs": "^4.11.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@codingame/esbuild-import-meta-url-plugin": "https://gitpkg.vercel.app/hhu-adam/lean4monaco/esbuild-import-meta-url-plugin?main",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "npm": "^10.8.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-node-polyfills": "=0.17.0",
+    "vite-plugin-static-copy": "^1.0.6"
+  }
+}
